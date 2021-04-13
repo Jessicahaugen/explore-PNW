@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="parksAPI.css" />
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Explore National Parks</title>
+  </head>
+  <body>
+    <div class = parksMain> 
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="landingpage.html"
+                >Home <span class="sr-only">(current)</span></a
+                >
+                <a class="nav-item nav-link" href="aboutParks.html"
+                >The PNW</a
+                >
+                <a class="nav-item nav-link" href="parksAPI.html">Explore</a>
+                <a class="nav-item nav-link" href="parkMaps.html">Maps</a>
+            </div>
+        </div>
+    </nav>
+    <div class = "seeAll"><button id = "mainBtn" type="button" class="btn btn-outline-secondary">See All</button>
+    </div>
+    <div class = "buttons" >
+        <button id = "hiking" type="button" class="btn btn-outline-secondary">Hiking +</button>
+        <button id = "skiing" type="button" class="btn btn-outline-secondary">Skiing +</button>
+        <button id = "camping" type="button" class="btn btn-outline-secondary">Camping +</button>
+        <button id = "biking type="button" class="btn btn-outline-secondary">Biking + </button>
+        <button id = "birdwatching" type="button" class="btn btn-outline-secondary">Birdwatching + </button>
+        <button id = "fishing" type="button" class="btn btn-outline-secondary">Fishing + </button>
+        <button id = "tours"type="button" class="btn btn-outline-secondary">Guided Tours + </button>
+        <button id = "Horseback" type="button" class="btn btn-outline-secondary">Horseback Riding + </button>
+    </div>   
+    <div class = parkList></div>
+    </div>
+
+  </body>
+  <script src="explorePNWLanding.js"></script>
+</html>

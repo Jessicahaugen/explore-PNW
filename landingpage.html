@@ -18,12 +18,49 @@
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
     <title>Explore the PNW</title>
   </head>
   <body>
     <div class="landingMain">
-      <button type="button" class="btn btn-outline-light">Light</button>
+      <video autoplay muted id="myVideo">
+        <source src="motionplaces0029c024q001.mp4" type="video/mp4" />
+      </video>
+      <nav class="navbar bg-transparent navbar-expand-lg" id="nav">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav" id="nav">
+            <a
+              class="text-light nav-item nav-link active"
+              href="landingpage.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+            <a class="text-light nav-item nav-link" href="aboutParks.html"
+              >The PNW</a
+            >
+            <a class="text-light nav-item nav-link" href="parksAPI.html"
+              >Explore</a
+            >
+            <a class="text-light nav-item nav-link" href="parkMaps.html"
+              >Maps</a
+            >
+          </div>
+        </div>
+      </nav>
+      <header class="welcome">
+        <text>National Parks:Pacific North West<text>
+        </header>
+      <button
+        type="button"
+        id="exploreBtn"
+        onclick="document.location='parksAPI.html'"
+        class="btn btn-outline-light bg-transparent"
+      >
+        <span>Explore</span>
+      </button>
     </div>
   </body>
-  <script src="explorePNWLanding.js"></script>
 </html>
