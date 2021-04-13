@@ -1,8 +1,8 @@
 let parkList = document.querySelector(".parkList")
 
-
+//function to get park info and display in card format
 const getParks = async () => {
-    const getInfo = await fetch ("https://developer.nps.gov/api/v1/parks?stateCode=WA,OR,ID&api_key=BTdTPERvFV1nekHJgbxCvjcXJB0vpIaKm15h9EIq");
+    const getInfo = await fetch ("https://developer.nps.gov/api/v1/parks?stateCode=WA,OR,ID&api_key=HUxRiqwN849LGQztfrgmnxS3egwTOmsLJp8fXvEH");
     const convertInfo = await getInfo.json();
     console.log(convertInfo);
 
@@ -24,20 +24,55 @@ const getParks = async () => {
 
         parkContainer.append(mainImg,parkName,parkState,parkInfo,);
         parkList.append(parkContainer);
-       
+   
     }
 }   
-// getParks()
 
-const getActivity = async () => {
-    const getInfo = await fetch ("https://developer.nps.gov/api/v1/parks?stateCode=WA,OR,ID&api_key=BTdTPERvFV1nekHJgbxCvjcXJB0vpIaKm15h9EIq");
+//button event listeners to change activity name
+let hikingBtn = document.querySelector("#hiking");
+    hikingBtn.addEventListener("click", function() {
+        getActivity("Hiking"); 
+})
+let skiingBtn = document.querySelector("#skiing");
+        skiingBtn.addEventListener("click", function() {
+    getActivity("Skiing"); 
+})
+let bikingBtn = document.querySelector("#biking");
+    bikingBtn.addEventListener("click", function() {
+    getActivity("Biking"); 
+})
+let campingBtn = document.querySelector("#camping");
+    campingBtn.addEventListener("click", function() {
+    getActivity("Camping"); 
+})
+let birdBtn = document.querySelector("#birdwatching");
+    birdBtn.addEventListener("click", function() {
+    getActivity("Birdwatching"); 
+})
+let fishingBtn = document.querySelector("#fishing");
+    fishingBtn.addEventListener("click", function() {
+    getActivity("Fishing"); 
+})
+let toursBtn = document.querySelector("#tours");
+    toursBtn.addEventListener("click", function() {
+        getActivity("Guided Tours"); 
+    })
+let horseBtn = document.querySelector("#horseback");
+    horseBtn.addEventListener("click", function() {
+        getActivity("Horseback Riding"); 
+    })
+//Function to filter API by Activity name and return appropriate parks
+const getActivity = async (activityName) => {
+    const getInfo = await fetch ("https://developer.nps.gov/api/v1/parks?stateCode=WA,OR,ID&api_key=HUxRiqwN849LGQztfrgmnxS3egwTOmsLJp8fXvEH");
     const convertInfo = await getInfo.json();
     console.log(convertInfo);
-    const matchingParks = convertInfo.data.filter(d => d.activities.find(a => a.name === "Hiking")) 
+   
+
+    const matchingParks = convertInfo.data.filter(d => d.activities.find(a => a.name === activityName)) 
     console.log(matchingParks)
     
     for (parks of matchingParks){
-        let i = 1;
+        let i = 0;
         let parkContainer = document.createElement("div");
         parkContainer.class = "parkContainer";
         let mainImg = document.createElement("img");
@@ -57,14 +92,11 @@ const getActivity = async () => {
     }
 }
 // getActivity();
-//if a button IS clicked trigger a function that filters data
-//Finds/hiking etc 
-//returns those //
-
+let removeButtons = document.querySelector(".buttons");
 let seeAllBtn = document.querySelector(".seeAll");
 seeAllBtn.addEventListener("click", function() {
 getParks();
-
+removeButtons.innerHTML= "";
 })
 
 
