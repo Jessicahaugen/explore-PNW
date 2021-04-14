@@ -1,0 +1,29 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: rgb(240, 235, 235);
+  font-family: "Roboto", sans-serif;
+}
+.aboutMain {
+  justify-content: center;
+  align-items: center;
+}
+form {
+  padding: 40px;
+  width: 50%;
+}
+.name {
+  width: 50%;
+}
+.email {
+  width: 50%;
+}
+.reviews {
+  display: flex;
+  flex-direction: column;
+}
+#reviewInput {
+  height: 100px;
+}
