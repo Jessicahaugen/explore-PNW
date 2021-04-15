@@ -1,17 +1,17 @@
 .photo-gallery {
-  color: #313437;
+  color: #172e0c;
   background-color: #fff;
 }
 
 .photo-gallery p {
-  color: #7d8285;
+  color: #172e0c;
 }
 
 .photo-gallery h2 {
   font-weight: bold;
   margin-bottom: 40px;
   padding-top: 40px;
-  color: inherit;
+  color: #243f17;
 }
 
 @media (max-width: 767px) {
@@ -38,4 +38,29 @@
 
 .photo-gallery .item {
   padding-bottom: 30px;
+}
+#nav {
+  top: 0;
+  color: whitesmoke;
+  width: 100%;
+  height: 75px;
+  font-size: 23px;
+  font-family: "Roboto", sans-serif;
+}
+.img-fluid {
+  border-radius: 3px;
+  height: 500px;
+  width: 500px;
+  overflow: hidden;
+}
+.text-center {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+.natPark {
+  color: rgb(3, 83, 3);
+}
+#title {
+  font-size: 45px;
+  color: rgb(3, 83, 3);
 }

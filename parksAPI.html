@@ -11,8 +11,11 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous"
   />
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+    rel="stylesheet"
+  />
     <title>Explore National Parks</title>
   </head>
   <body>
@@ -27,13 +30,12 @@
             >The PNW</a
             >
             <a class="nav-item nav-link" href="parksAPI.html">Explore</a>
-            <a class="nav-item nav-link" href="parkMaps.html">Maps</a>
+            <a class="nav-item nav-link" href="parkGallery.html">Gallery</a>
         </div>
     </div>
 </nav>
     <div class = parksMain> 
-        <div class = "seeAll"><button id = "mainBtn" type="button" class="btn btn-outline-secondary">See All</button>
-        </div>
+        <h1 class = "pageTitle"> Navigate Parks by your favorite Activity!</h1>
         <div class = "buttons" >
             <button id = "hiking" type="button" class="btn btn-outline-secondary">Hiking +</button>
             <button id = "skiing" type="button" class="btn btn-outline-secondary">Skiing +</button>
@@ -43,11 +45,25 @@
             <button id = "fishing" type="button" class="btn btn-outline-secondary">Fishing + </button>
             <button id = "tours"type="button" class="btn btn-outline-secondary">Guided Tours + </button>
             <button id = "horseback" type="button" class="btn btn-outline-secondary">Horseback Riding + </button>
+            <div class = "favorites"><button id = "faveBtn" type="button" class="text-danger btn btn-outline-secondary">Favorites <i class="fas fa-heart"></i></button>
+            </div>
         </div>   
-        <div class = parkList></div>
-    
+        <div class = "activityIcons"><i height = "45px" class="fas fa-biking"></i>
+            <i class="fas fa-binoculars"></i>
+            <i class="fas fa-campground"></i>
+            <i class="fas fa-map-signs"></i>
+            <i class="fas fa-fish"></i>
+            <i class="fas fa-skiing"></i>
+        </div>
+        <div class = "seeAll"><button id = "mainBtn" type="button" class="btn btn-outline-secondary">See All</button>
+        </div>
     </div>
-
+        <div>
+        <h2 class = "filterTitle"></h2>
+        </div>
+        <div class = "parkList">
+        </div>
   </body>
-  <script src="explorePNWLanding.js"></script>
+  <script src="parksAPI.js"></script>
+  <script src="https://kit.fontawesome.com/aac3771b44.js" crossorigin="anonymous"></script>
 </html>

@@ -1,29 +1,57 @@
 body {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: black;
-  color: rgb(240, 235, 235);
+  background: linear-gradient(to right, #071307, #000000, #000000, #0c1f0c);
+  color: whitesmoke;
   font-family: "Roboto", sans-serif;
 }
 .aboutMain {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.formContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 form {
   padding: 40px;
   width: 50%;
 }
-.name {
-  width: 50%;
-}
-.email {
-  width: 50%;
+
+#reviewInput {
+  height: 200px;
 }
 .reviews {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-left: 40px;
+  padding-bottom: 100px;
 }
-#reviewInput {
-  height: 100px;
+#nav {
+  top: 0;
+  color: whitesmoke;
+  height: 75px;
+  font-size: 23px;
+  font-family: "Roboto", sans-serif;
+}
+.info {
+  margin-top: 100px;
+  margin-left: 40px;
+  margin-right: 40px;
+
+  align-content: flex-end;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: whitesmoke;
+}
+h1 {
+  padding-bottom: 30px;
+}
+button {
+  margin-top: 15px;
+  width: 150px;
+  height: 40px;
+  padding: 5px;
 }
