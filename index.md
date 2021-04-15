@@ -1,1 +1,59 @@
-
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="explorePNW.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <title>Explore the PNW</title>
+  </head>
+  <body>
+    <div class="landingMain">
+      <video autoplay muted id="myVideo">
+        <source src="motionplaces0029c024q001.mp4" type="video/mp4" />
+      </video>
+      <nav class="navbar bg-transparent navbar-expand-lg" id="nav">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav" id="nav">
+            <a
+              class="text-light nav-item nav-link active"
+              href="landingpage.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+            <a class="text-light nav-item nav-link" href="aboutParks.html"
+              >The PNW</a
+            >
+            <a class="text-light nav-item nav-link" href="parksAPI.html"
+              >Explore</a
+            >
+            <a class="text-light nav-item nav-link" href="parkGallery.html"
+              >Gallery</a
+            >
+          </div>
+        </div>
+      </nav>
+      <button
+        type="button"
+        id="exploreBtn"
+        onclick="document.location='parksAPI.html'"
+        class="btn btn-outline-light bg-transparent"
+      >
+        <span>Explore</span>
+      </button>
+    </div>
+  </body>
+</html>
