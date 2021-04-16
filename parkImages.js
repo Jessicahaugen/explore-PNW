@@ -21,6 +21,6 @@ let getImages = async () => {
     '" data-lightbox="photos"><img class="img-fluid" src="' +
     newImage +
     '"></a></div>';            
-    }   
+    }      
 };
 getImages();
