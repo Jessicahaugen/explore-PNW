@@ -2,7 +2,7 @@ let images = document.querySelector("#photos");
 
 let getImages = async () => {
   const retrieveImages = fetch(
-    "https://developer.nps.gov/api/v1/parks?stateCode=WA,OR,ID&api_key=HUxRiqwN849LGQztfrgmnxS3egwTOmsLJp8fXvEH"
+    "https://developer.nps.gov/api/v1/parks?stateCode=WA,OR,ID&api_key=fulAEa7kmQxxruUH93NX1dJp9KT8W7O1loEFHwly"
   );
   const imagesJson = await (await retrieveImages).json();
   const parkImages = imagesJson.data

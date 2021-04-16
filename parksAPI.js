@@ -4,7 +4,7 @@ var favorites = [];
 //function to get park info and display in card format
 const getParks = async (activityName, onlyFavorites) => {
   const getInfo = await fetch(
-    "https://developer.nps.gov/api/v1/parks?stateCode=WA,OR,ID&api_key=HUxRiqwN849LGQztfrgmnxS3egwTOmsLJp8fXvEH"
+    "https://developer.nps.gov/api/v1/parks?stateCode=WA,OR,ID&api_key=fulAEa7kmQxxruUH93NX1dJp9KT8W7O1loEFHwly"
   );
   const convertInfo = await getInfo.json();
   convertInfo.data = convertInfo.data
@@ -20,37 +20,38 @@ const getParks = async (activityName, onlyFavorites) => {
       }
       return true;
     });
-  parkList.innerHTML = "";
-
-  for (let i = 0; i < convertInfo.data.length; i++) {
-    let parkContainer = document.createElement("div");
-    parkContainer.className = `container-sm`;
-    parkContainer.id ="parkCard"
-    let imgDiv = document.createElement("div");
-    imgDiv.className="imageDiv";
-    let mainImg = document.createElement("img");
-    mainImg.className = "parkImage";
-    mainImg.height = "325";
-    mainImg.width = "325";
-    mainImg.src = convertInfo.data[i].images[0].url;
-    let infoDiv = document.createElement("div");
-    infoDiv.className="infoDiv";
-    let parkState = document.createElement("h3");
-    parkState.innerHTML = `State: ${convertInfo.data[i].states}`;
-    let parkInfo = document.createElement("p");
-    parkInfo.innerText = convertInfo.data[i].description;
-    let parkName = document.createElement("h2");
-    parkName.className= "parkNames";
-    parkName.innerHTML = convertInfo.data[i].fullName;
-    let heart = document.createElement("button");
-    heart.innerHTML = `add to favorites <i class="far fa-heart"></i>`;
-    heart.className = "heart";
-
-    heart.addEventListener("click", function () {
-      favorites.push(convertInfo.data[i].id);
-      heart.className += " favorited";
-      alert("This park has been added to your favorites! Good luck on your Adventures!");
-    })
+    console.log(convertInfo.data)
+    parkList.innerHTML = "";
+    
+    for (let i = 0; i < convertInfo.data.length; i++) {
+      let parkContainer = document.createElement("div");
+      parkContainer.className = `container-sm`;
+      parkContainer.id ="parkCard"
+      let imgDiv = document.createElement("div");
+      imgDiv.className="imageDiv";
+      let mainImg = document.createElement("img");
+      mainImg.className = "parkImage";
+      mainImg.height = "325";
+      mainImg.width = "325";
+      mainImg.src = convertInfo.data[i].images[0].url;
+      let infoDiv = document.createElement("div");
+      infoDiv.className="infoDiv";
+      let parkState = document.createElement("h3");
+      parkState.innerHTML = `State: ${convertInfo.data[i].states}`;
+      let parkInfo = document.createElement("p");
+      parkInfo.innerText = convertInfo.data[i].description;
+      let parkName = document.createElement("h2");
+      parkName.className= "parkNames";
+      parkName.innerHTML = convertInfo.data[i].fullName;
+      let heart = document.createElement("button");
+      heart.innerHTML = `add to favorites <i class="far fa-heart"></i>`;
+      heart.className = "heart";
+      
+      heart.addEventListener("click", function () {
+        favorites.push(convertInfo.data[i].id);
+        heart.className += " favorited";
+        alert("This park has been added to your favorites! Good luck on your Adventures!");
+      })
     infoDiv.append(parkName, parkState, parkInfo, heart)
     imgDiv.append(mainImg);
     parkContainer.append(imgDiv, infoDiv);
