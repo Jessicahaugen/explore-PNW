@@ -6,7 +6,7 @@ let getImages = async () => {
   );
   const imagesJson = await (await retrieveImages).json();
   const parkImages = imagesJson.data
-  //creating an empty array to insert my  maped object to make it iterable. then concating the array then slicing it so I dont get 100+ photos on the page.
+  //creating an empty array to insert my maped objectterable strings. then concating the array then slicing it so I dont get 100+ photos on the page.
   let photo = []
   for (data of parkImages) {
     let urls = data.images.map(d => d.url);
