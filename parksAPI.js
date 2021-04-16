@@ -20,8 +20,6 @@ const getParks = async (activityName, onlyFavorites) => {
       }
       return true;
     });
-
-
   parkList.innerHTML = "";
 
   for (let i = 0; i < convertInfo.data.length; i++) {
@@ -107,12 +105,11 @@ horseBtn.addEventListener("click", function () {
   getParks("Horseback Riding");
   filterHeader.innerHTML = "Hit the trails on horseback!";
 });
-  
-let removeButtons = document.querySelector(".buttons");
+
 let seeAllBtn = document.querySelector("#mainBtn");
 seeAllBtn.addEventListener("click", function () {
   getParks();
-  removeButtons.innerHTML = "";
+
   filterHeader.innerHTML = "Collection of all National parks in the Pacific NW";
   
 });

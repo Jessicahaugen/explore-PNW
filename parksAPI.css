@@ -40,6 +40,11 @@ body {
   width: 50%;
 }
 .infoDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   width: 50%;
 }
 
@@ -88,7 +93,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 #mainBtn {
-  align-items: center;
   margin: 20px 20px;
   margin-left: 0;
   height: 60px;
@@ -107,7 +111,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  .parkList {
+    display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
   }
   .imageDiv {
     display: flex;
@@ -116,12 +124,21 @@ body {
   }
 
   .infoDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: auto;
+  }
+  .mainBtn {
+    height: 60px;
+    width: 200px;
+    font-size: 20px;
   }
   .pageTitle {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
   .parkNames {
     padding: 3px;
@@ -134,7 +151,6 @@ body {
 
 .seeAll {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -156,7 +172,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5%;
 }
 .parkNames {
   padding: 3px;
